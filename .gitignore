@@ -1,0 +1,9 @@
+# Ignore all text files
+*.txt
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

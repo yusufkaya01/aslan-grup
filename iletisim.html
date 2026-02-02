@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Aslan Grup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>ASLAN GRUP</h1>
+                <p class="slogan" data-tr="Çözüm Ortağınız" data-en="Your Solution Partner" data-de="Ihr Lösungspartner" data-fr="Votre Partenaire Solution" data-es="Su Socio de Soluciones">Çözüm Ortağınız</p>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-tr="Anasayfa" data-en="Home" data-de="Startseite" data-fr="Accueil" data-es="Inicio">Anasayfa</a></li>
+                <li><a href="hakkimizda.html" data-tr="Hakkımızda" data-en="About Us" data-de="Über Uns" data-fr="À Propos" data-es="Sobre Nosotros">Hakkımızda</a></li>
+                <li><a href="sirketler.html" data-tr="Şirketler" data-en="Companies" data-de="Unternehmen" data-fr="Entreprises" data-es="Empresas">Şirketler</a></li>
+                <li><a href="faaliyetler.html" data-tr="Faaliyetler" data-en="Activities" data-de="Aktivitäten" data-fr="Activités" data-es="Actividades">Faaliyetler</a></li>
+                <li><a href="iletisim.html" class="active" data-tr="İletişim" data-en="Contact" data-de="Kontakt" data-fr="Contact" data-es="Contacto">İletişim</a></li>
+            </ul>
+            <div class="language-switcher">
+                <select id="langSwitch">
+                    <option value="tr">🇹🇷 TR</option>
+                    <option value="en">🇬🇧 EN</option>
+                    <option value="de">🇩🇪 DE</option>
+                    <option value="fr">🇫🇷 FR</option>
+                    <option value="es">🇪🇸 ES</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-tr="İletişim" data-en="Contact" data-de="Kontakt" data-fr="Contact" data-es="Contacto">İletişim</h1>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 data-tr="İletişim Bilgileri" data-en="Contact Information" data-de="Kontaktinformationen" data-fr="Informations de Contact" data-es="Información de Contacto">İletişim Bilgileri</h2>
+                    <div class="info-item">
+                        <h3 data-tr="Merkez Ofis" data-en="Head Office" data-de="Hauptbüro" data-fr="Siège Social" data-es="Oficina Central">Merkez Ofis</h3>
+                        <p><strong data-tr="Adres:" data-en="Address:" data-de="Adresse:" data-fr="Adresse:" data-es="Dirección:">Adres:</strong> <span data-tr="Türkiye" data-en="Turkey" data-de="Türkei" data-fr="Turquie" data-es="Turquía">Türkiye</span></p>
+                    </div>
+
+                    <div class="info-item">
+                        <h3 data-tr="Grup Şirketleri" data-en="Group Companies" data-de="Gruppenunternehmen" data-fr="Entreprises du Groupe" data-es="Empresas del Grupo">Grup Şirketleri</h3>
+                        <div class="company-links">
+                            <div class="link-item">
+                                <h4>Aslan Kozmetik</h4>
+                                <a href="https://www.laguscosmetic.com" target="_blank">www.laguscosmetic.com</a>
+                            </div>
+                            <div class="link-item">
+                                <h4>Rosa Therapy Hotels</h4>
+                                <a href="https://www.rosatherapy.com.tr" target="_blank">www.rosatherapy.com.tr</a>
+                            </div>
+                            <div class="link-item">
+                                <h4>Beyyurdu Çiftliği</h4>
+                                <a href="https://www.beyyurdu.com.tr" target="_blank">www.beyyurdu.com.tr</a>
+                            </div>
+                            <div class="link-item">
+                                <h4>Dijital Medya Platform</h4>
+                                <a href="https://www.otuziki.tr" target="_blank">www.otuziki.tr</a>
+                            </div>
+                            <div class="link-item">
+                                <h4>Beyaz İş Sağlığı ve Güvenliği</h4>
+                                <a href="https://www.beyazosgb.tr" target="_blank">www.beyazosgb.tr</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2 data-tr="Bize Ulaşın" data-en="Get In Touch" data-de="Kontaktieren Sie Uns" data-fr="Contactez-Nous" data-es="Contáctenos">Bize Ulaşın</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-tr="Ad Soyad" data-en="Full Name" data-de="Vollständiger Name" data-fr="Nom Complet" data-es="Nombre Completo">Ad Soyad</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-tr="E-posta" data-en="Email" data-de="E-Mail" data-fr="E-mail" data-es="Correo Electrónico">E-posta</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" data-tr="Telefon" data-en="Phone" data-de="Telefon" data-fr="Téléphone" data-es="Teléfono">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company" data-tr="İlgili Şirket" data-en="Related Company" data-de="Betreffendes Unternehmen" data-fr="Entreprise Concernée" data-es="Empresa Relacionada">İlgili Şirket</label>
+                            <select id="company" name="company">
+                                <option value="" data-tr="Seçiniz" data-en="Select" data-de="Auswählen" data-fr="Sélectionner" data-es="Seleccionar">Seçiniz</option>
+                                <option value="aslan-grup" data-tr="Aslan Grup" data-en="Aslan Group" data-de="Aslan Gruppe" data-fr="Groupe Aslan" data-es="Grupo Aslan">Aslan Grup</option>
+                                <option value="kozmetik">Aslan Kozmetik</option>
+                                <option value="rosa-therapy">Rosa Therapy Hotels</option>
+                                <option value="beyyurdu">Beyyurdu Çiftliği</option>
+                                <option value="dijital-medya" data-tr="Dijital Medya Platform" data-en="Digital Media Platform" data-de="Digitale Medienplattform" data-fr="Plateforme de Médias Numériques" data-es="Plataforma de Medios Digitales">Dijital Medya Platform</option>
+                                <option value="beyaz-is" data-tr="Beyaz İş Sağlığı ve Güvenliği" data-en="Beyaz Occupational Health and Safety" data-de="Beyaz Arbeitsschutz und Arbeitssicherheit" data-fr="Beyaz Santé et Sécurité au Travail" data-es="Beyaz Salud y Seguridad Ocupacional">Beyaz İş Sağlığı ve Güvenliği</option>
+                                <option value="aslan-export">Aslan Export</option>
+                                <option value="karif-spor" data-tr="Karif Spor Kulübü" data-en="Karif Sports Club" data-de="Karif Sportclub" data-fr="Karif Sports Club" data-es="Club Deportivo Karif">Karif Spor Kulübü</option>
+                                <option value="his-dernegi" data-tr="His Derneği" data-en="His Association" data-de="His-Verein" data-fr="Association His" data-es="Asociación His">His Derneği</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-tr="Mesajınız" data-en="Your Message" data-de="Ihre Nachricht" data-fr="Votre Message" data-es="Su Mensaje">Mesajınız</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button" data-tr="Gönder" data-en="Send" data-de="Senden" data-fr="Envoyer" data-es="Enviar">Gönder</button>
+                    </form>
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Aslan Grup. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved." data-de="Alle Rechte vorbehalten." data-fr="Tous droits réservés." data-es="Todos los derechos reservados.">Tüm hakları saklıdır.</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
