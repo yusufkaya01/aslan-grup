@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aslan Grup - Çözüm Ortağınız</title>
+    <link rel="icon" type="image/jpeg" href="aslan-grup.jpeg">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1>ASLAN GRUP</h1>
-                <p class="slogan" data-tr="Çözüm Ortağınız" data-en="Your Solution Partner" data-de="Ihr Lösungspartner" data-fr="Votre Partenaire Solution" data-es="Su Socio de Soluciones">Çözüm Ortağınız</p>
+                <img src="aslan-grup.jpeg" alt="Aslan Grup Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>ASLAN GRUP</h1>
+                    <p class="slogan" data-tr="Çözüm Ortağınız" data-en="Your Solution Partner" data-de="Ihr Lösungspartner" data-fr="Votre Partenaire Solution" data-es="Su Socio de Soluciones" data-ar="شريكك في الحلول" data-zh="您的解决方案合作伙伴">Çözüm Ortağınız</p>
+                </div>
             </div>
             <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span>
@@ -19,11 +23,11 @@
                 <span></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active" data-tr="Anasayfa" data-en="Home" data-de="Startseite" data-fr="Accueil" data-es="Inicio">Anasayfa</a></li>
-                <li><a href="hakkimizda.html" data-tr="Hakkımızda" data-en="About Us" data-de="Über Uns" data-fr="À Propos" data-es="Sobre Nosotros">Hakkımızda</a></li>
-                <li><a href="sirketler.html" data-tr="Şirketler" data-en="Companies" data-de="Unternehmen" data-fr="Entreprises" data-es="Empresas">Şirketler</a></li>
-                <li><a href="faaliyetler.html" data-tr="Faaliyetler" data-en="Activities" data-de="Aktivitäten" data-fr="Activités" data-es="Actividades">Faaliyetler</a></li>
-                <li><a href="iletisim.html" data-tr="İletişim" data-en="Contact" data-de="Kontakt" data-fr="Contact" data-es="Contacto">İletişim</a></li>
+                <li><a href="index.html" class="active" data-tr="Anasayfa" data-en="Home" data-de="Startseite" data-fr="Accueil" data-es="Inicio" data-ar="الرئيسية" data-zh="首页">Anasayfa</a></li>
+                <li><a href="hakkimizda.html" data-tr="Hakkımızda" data-en="About Us" data-de="Über Uns" data-fr="À Propos" data-es="Sobre Nosotros" data-ar="معلومات عنا" data-zh="关于我们">Hakkımızda</a></li>
+                <li><a href="sirketler.html" data-tr="Şirketler" data-en="Companies" data-de="Unternehmen" data-fr="Entreprises" data-es="Empresas" data-ar="الشركات" data-zh="公司">Şirketler</a></li>
+                <li><a href="faaliyetler.html" data-tr="Faaliyetler" data-en="Activities" data-de="Aktivitäten" data-fr="Activités" data-es="Actividades" data-ar="الأنشطة" data-zh="活动">Faaliyetler</a></li>
+                <li><a href="iletisim.html" data-tr="İletişim" data-en="Contact" data-de="Kontakt" data-fr="Contact" data-es="Contacto" data-ar="اتصل بنا" data-zh="联系我们">İletişim</a></li>
             </ul>
             <div class="language-switcher">
                 <select id="langSwitch">
@@ -32,6 +36,8 @@
                     <option value="de">🇩🇪 DE</option>
                     <option value="fr">🇫🇷 FR</option>
                     <option value="es">🇪🇸 ES</option>
+                    <option value="ar">🇸🇦 AR</option>
+                    <option value="zh">🇨🇳 ZH</option>
                 </select>
             </div>
         </div>
@@ -39,73 +45,80 @@
 
     <section class="hero">
         <div class="container">
-            <h2 class="hero-title" data-tr="Güçlü Bir Holding, Çeşitli Alanlar" data-en="A Strong Holding, Various Fields" data-de="Ein Starkes Holding, Verschiedene Bereiche" data-fr="Un Holding Fort, Divers Domaines" data-es="Un Holding Fuerte, Diversos Campos">Güçlü Bir Holding, Çeşitli Alanlar</h2>
-            <p class="hero-subtitle" data-tr="Kozmetikten turisme, tarımdan sağlığa, spordan dijital medyaya kadar geniş bir yelpazede hizmet veriyoruz." data-en="We serve in a wide range from cosmetics to tourism, agriculture to health, sports to digital media." data-de="Wir bedienen eine breite Palette von Kosmetik bis Tourismus, Landwirtschaft bis Gesundheit, Sport bis digitale Medien." data-fr="Nous servons dans une large gamme de cosmétiques au tourisme, de l'agriculture à la santé, du sport aux médias numériques." data-es="Servimos en una amplia gama desde cosméticos hasta turismo, agricultura hasta salud, deportes hasta medios digitales.">Kozmetikten turisme, tarımdan sağlığa, spordan dijital medyaya kadar geniş bir yelpazede hizmet veriyoruz.</p>
-            <a href="hakkimizda.html" class="cta-button" data-tr="Daha Fazla Bilgi" data-en="Learn More" data-de="Mehr Erfahren" data-fr="En Savoir Plus" data-es="Saber Más">Daha Fazla Bilgi</a>
+            <h2 class="hero-title" data-tr="Güçlü Bir Holding, Çeşitli Alanlar" data-en="A Strong Holding, Various Fields" data-de="Ein Starkes Holding, Verschiedene Bereiche" data-fr="Un Holding Fort, Divers Domaines" data-es="Un Holding Fuerte, Diversos Campos" data-ar="قابضة قوية، مجالات متنوعة" data-zh="强大的控股公司，多元化领域">Güçlü Bir Holding, Çeşitli Alanlar</h2>
+            <p class="hero-subtitle" data-tr="Kozmetikten turisme, tarımdan sağlığa, spordan dijital medyaya kadar geniş bir yelpazede hizmet veriyoruz." data-en="We serve in a wide range from cosmetics to tourism, agriculture to health, sports to digital media." data-de="Wir bedienen eine breite Palette von Kosmetik bis Tourismus, Landwirtschaft bis Gesundheit, Sport bis digitale Medien." data-fr="Nous servons dans une large gamme de cosmétiques au tourisme, de l'agriculture à la santé, du sport aux médias numériques." data-es="Servimos en una amplia gama desde cosméticos hasta turismo, agricultura hasta salud, deportes hasta medios digitales." data-ar="نحن نخدم في مجموعة واسعة من مستحضرات التجميل إلى السياحة، من الزراعة إلى الصحة، من الرياضة إلى الإعلام الرقمي." data-zh="我们提供从化妆品到旅游、从农业到健康、从体育到数字媒体的广泛服务。">Kozmetikten turisme, tarımdan sağlığa, spordan dijital medyaya kadar geniş bir yelpazede hizmet veriyoruz.</p>
+            <a href="hakkimizda.html" class="cta-button" data-tr="Daha Fazla Bilgi" data-en="Learn More" data-de="Mehr Erfahren" data-fr="En Savoir Plus" data-es="Saber Más" data-ar="معرفة المزيد" data-zh="了解更多">Daha Fazla Bilgi</a>
         </div>
     </section>
 
     <section class="companies-preview">
         <div class="container">
-            <h2 class="section-title" data-tr="Grup Şirketlerimiz" data-en="Our Group Companies" data-de="Unsere Gruppenunternehmen" data-fr="Nos Entreprises du Groupe" data-es="Nuestras Empresas del Grupo">Grup Şirketlerimiz</h2>
+            <h2 class="section-title" data-tr="Grup Şirketlerimiz" data-en="Our Group Companies" data-de="Unsere Gruppenunternehmen" data-fr="Nos Entreprises du Groupe" data-es="Nuestras Empresas del Grupo" data-ar="شركات مجموعتنا" data-zh="我们的集团公司">Grup Şirketlerimiz</h2>
             <div class="companies-grid">
                 <div class="company-card">
                     <div class="company-logo">
-                        <img src="lagus.png" alt="Aslan Kozmetik Logo" onerror="this.parentElement.innerHTML='🧴'">
+                        <img src="lagus.jpeg" alt="Aslan Kozmetik Logo" onerror="this.parentElement.innerHTML='🧴'">
                     </div>
                     <h3>Aslan Kozmetik</h3>
-                    <p data-tr="2006'dan beri kozmetik sektöründe" data-en="In cosmetics industry since 2006" data-de="Seit 2006 in der Kosmetikindustrie" data-fr="Dans l'industrie cosmétique depuis 2006" data-es="En la industria cosmética desde 2006">2006'dan beri kozmetik sektöründe</p>
+                    <p data-tr="2006'dan beri kozmetik sektöründe" data-en="In cosmetics industry since 2006" data-de="Seit 2006 in der Kosmetikindustrie" data-fr="Dans l'industrie cosmétique depuis 2006" data-es="En la industria cosmética desde 2006" data-ar="في صناعة مستحضرات التجميل منذ 2006" data-zh="自2006年以来在化妆品行业">2006'dan beri kozmetik sektöründe</p>
+                </div>
+                <div class="company-card">
+                    <div class="company-logo">
+                        <img src="ruhsha.jpeg" alt="Ruhsha Logo" onerror="this.parentElement.innerHTML='💄'">
+                    </div>
+                    <h3>Ruhsha</h3>
+                    <p data-tr="Kozmetik ürünleri" data-en="Cosmetic products" data-de="Kosmetikprodukte" data-fr="Produits cosmétiques" data-es="Productos cosméticos" data-ar="منتجات التجميل" data-zh="化妆品">Kozmetik ürünleri</p>
                 </div>
                 <div class="company-card">
                     <div class="company-logo">
                         <img src="rosa-therapy.svg" alt="Rosa Therapy Logo" onerror="this.parentElement.innerHTML='🏨'">
                     </div>
                     <h3>Rosa Therapy Hotels</h3>
-                    <p data-tr="Antalya ve Isparta'da termal tesisler" data-en="Thermal facilities in Antalya and Isparta" data-de="Thermaleinrichtungen in Antalya und Isparta" data-fr="Installations thermales à Antalya et Isparta" data-es="Instalaciones termales en Antalya e Isparta">Antalya ve Isparta'da termal tesisler</p>
+                    <p data-tr="Antalya ve Isparta'da termal tesisler" data-en="Thermal facilities in Antalya and Isparta" data-de="Thermaleinrichtungen in Antalya und Isparta" data-fr="Installations thermales à Antalya et Isparta" data-es="Instalaciones termales en Antalya e Isparta" data-ar="مرافق حرارية في أنطاليا وإسبرطة" data-zh="在安塔利亚和伊斯帕尔塔的温泉设施">Antalya ve Isparta'da termal tesisler</p>
                 </div>
                 <div class="company-card">
                     <div class="company-logo">
                         <img src="beyyurdu.jpg" alt="Beyyurdu Çiftliği Logo" onerror="this.parentElement.innerHTML='🌾'">
                     </div>
                     <h3>Beyyurdu Çiftliği</h3>
-                    <p data-tr="Tarımsal üretim ve hayvancılık" data-en="Agricultural production and livestock" data-de="Landwirtschaftliche Produktion und Viehzucht" data-fr="Production agricole et élevage" data-es="Producción agrícola y ganadería">Tarımsal üretim ve hayvancılık</p>
+                    <p data-tr="Tarımsal üretim ve hayvancılık" data-en="Agricultural production and livestock" data-de="Landwirtschaftliche Produktion und Viehzucht" data-fr="Production agricole et élevage" data-es="Producción agrícola y ganadería" data-ar="الإنتاج الزراعي والثروة الحيوانية" data-zh="农业生产和畅牧业">Tarımsal üretim ve hayvancılık</p>
                 </div>
                 <div class="company-card">
                     <div class="company-logo">
                         <img src="beyazosgb.png" alt="Beyaz İş Sağlığı ve Güvenliği Logo" onerror="this.parentElement.innerHTML='💼'">
                     </div>
                     <h3>Beyaz İş Sağlığı ve Güvenliği</h3>
-                    <p data-tr="1000+ firmaya hizmet veren lider kuruluş" data-en="Leading organization serving 1000+ companies" data-de="Führende Organisation für 1000+ Unternehmen" data-fr="Organisation leader servant 1000+ entreprises" data-es="Organización líder sirviendo 1000+ empresas">1000+ firmaya hizmet veren lider kuruluş</p>
+                    <p data-tr="1000+ firmaya hizmet veren lider kuruluş" data-en="Leading organization serving 1000+ companies" data-de="Führende Organisation für 1000+ Unternehmen" data-fr="Organisation leader servant 1000+ entreprises" data-es="Organización líder sirviendo 1000+ empresas" data-ar="منظمة رائدة تخدم أكثر من 1000 شركة" data-zh="为1000+家公司提供服务的领先组织">1000+ firmaya hizmet veren lider kuruluş</p>
                 </div>
                 <div class="company-card">
                     <div class="company-logo">
                         <img src="https://www.otuziki.tr/logo.png" alt="Dijital Medya Platform Logo" onerror="this.parentElement.innerHTML='📱'">
                     </div>
                     <h3>Dijital Medya Platform</h3>
-                    <p data-tr="Dijital içerik ve medya çözümleri" data-en="Digital content and media solutions" data-de="Digitale Inhalte und Medienlösungen" data-fr="Contenu numérique et solutions médias" data-es="Contenido digital y soluciones de medios">Dijital içerik ve medya çözümleri</p>
+                    <p data-tr="Dijital içerik ve medya çözümleri" data-en="Digital content and media solutions" data-de="Digitale Inhalte und Medienlösungen" data-fr="Contenu numérique et solutions médias" data-es="Contenido digital y soluciones de medios" data-ar="محتوى رقمي وحلول إعلامية" data-zh="数字内容和媒体解决方案">Dijital içerik ve medya çözümleri</p>
                 </div>
                 <div class="company-card">
                     <div class="company-icon">⚽</div>
                     <h3>Karif Spor Kulübü</h3>
-                    <p data-tr="Çeşitli spor dallarında faaliyet" data-en="Activities in various sports branches" data-de="Aktivitäten in verschiedenen Sportarten" data-fr="Activités dans diverses branches sportives" data-es="Actividades en varias ramas deportivas">Çeşitli spor dallarında faaliyet</p>
+                    <p data-tr="Çeşitli spor dallarında faaliyet" data-en="Activities in various sports branches" data-de="Aktivitäten in verschiedenen Sportarten" data-fr="Activités dans diverses branches sportives" data-es="Actividades en varias ramas deportivas" data-ar="أنشطة في مختلف الرياضات" data-zh="各种体育项目的活动">Çeşitli spor dallarında faaliyet</p>
                 </div>
             </div>
             <div class="center-button">
-                <a href="sirketler.html" class="secondary-button" data-tr="Tüm Şirketler" data-en="All Companies" data-de="Alle Unternehmen" data-fr="Toutes les Entreprises" data-es="Todas las Empresas">Tüm Şirketler</a>
+                <a href="sirketler.html" class="secondary-button" data-tr="Tüm Şirketler" data-en="All Companies" data-de="Alle Unternehmen" data-fr="Toutes les Entreprises" data-es="Todas las Empresas" data-ar="جميع الشركات" data-zh="所有公司">Tüm Şirketler</a>
             </div>
         </div>
     </section>
 
     <section class="quality-policy">
         <div class="container">
-            <h2 class="section-title" data-tr="Kalite Politikamız" data-en="Our Quality Policy" data-de="Unsere Qualitätspolitik" data-fr="Notre Politique Qualité" data-es="Nuestra Política de Calidad">Kalite Politikamız</h2>
-            <p class="policy-text" data-tr="Faaliyet gösterdiğimiz tüm alanlarda müşteri ve paydaş beklentilerini karşılayan, yasal ve mevzuat şartlarına uyumlu, sürdürülebilir ve güvenilir hizmet ve ürünler sunmayı temel ilke olarak benimseriz." data-en="We adopt as a fundamental principle to provide sustainable and reliable services and products that meet customer and stakeholder expectations, comply with legal and regulatory requirements in all areas where we operate." data-de="Wir nehmen es als Grundprinzip an, nachhaltige und zuverlässige Dienstleistungen und Produkte bereitzustellen, die Kunden- und Stakeholder-Erwartungen erfüllen und in allen Bereichen, in denen wir tätig sind, gesetzlichen und regulatorischen Anforderungen entsprechen." data-fr="Nous adoptons comme principe fondamental de fournir des services et produits durables et fiables qui répondent aux attentes des clients et des parties prenantes, conformes aux exigences légales et réglementaires dans tous les domaines où nous opérons." data-es="Adoptamos como principio fundamental proporcionar servicios y productos sostenibles y confiables que cumplan con las expectativas de clientes y partes interesadas, cumpliendo con requisitos legales y regulatorios en todas las áreas donde operamos.">Faaliyet gösterdiğimiz tüm alanlarda müşteri ve paydaş beklentilerini karşılayan, yasal ve mevzuat şartlarına uyumlu, sürdürülebilir ve güvenilir hizmet ve ürünler sunmayı temel ilke olarak benimseriz.</p>
+            <h2 class="section-title" data-tr="Kalite Politikamız" data-en="Our Quality Policy" data-de="Unsere Qualitätspolitik" data-fr="Notre Politique Qualité" data-es="Nuestra Política de Calidad" data-ar="سياسة الجودة لدينا" data-zh="我们的质量政策">Kalite Politikamız</h2>
+            <p class="policy-text" data-tr="Faaliyet gösterdiğimiz tüm alanlarda müşteri ve paydaş beklentilerini karşılayan, yasal ve mevzuat şartlarına uyumlu, sürdürülebilir ve güvenilir hizmet ve ürünler sunmayı temel ilke olarak benimseriz." data-en="We adopt as a fundamental principle to provide sustainable and reliable services and products that meet customer and stakeholder expectations, comply with legal and regulatory requirements in all areas where we operate." data-de="Wir nehmen es als Grundprinzip an, nachhaltige und zuverlässige Dienstleistungen und Produkte bereitzustellen, die Kunden- und Stakeholder-Erwartungen erfüllen und in allen Bereichen, in denen wir tätig sind, gesetzlichen und regulatorischen Anforderungen entsprechen." data-fr="Nous adoptons comme principe fondamental de fournir des services et produits durables et fiables qui répondent aux attentes des clients et des parties prenantes, conformes aux exigences légales et réglementaires dans tous les domaines où nous opérons." data-es="Adoptamos como principio fundamental proporcionar servicios y productos sostenibles y confiables que cumplan con las expectativas de clientes y partes interesadas, cumpliendo con requisitos legales y regulatorios en todas las áreas donde operamos." data-ar="نتبنى كمبدأ أساسي تقديم خدمات ومنتجات مستدامة وموثوقة تلبي توقعات العملاء وأصحاب المصلحة، وتتوافق مع المتطلبات القانونية والتنظيمية في جميع المجالات التي نعمل فيها." data-zh="我们采用一个基本原则，即提供可持续和可靠的服务和产品，满足客户和利益相关者的期望，在我们运营的所有领域遵守法律和监管要求。">Faaliyet gösterdiğimiz tüm alanlarda müşteri ve paydaş beklentilerini karşılayan, yasal ve mevzuat şartlarına uyumlu, sürdürülebilir ve güvenilir hizmet ve ürünler sunmayı temel ilke olarak benimseriz.</p>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Aslan Grup. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved." data-de="Alle Rechte vorbehalten." data-fr="Tous droits réservés." data-es="Todos los derechos reservados.">Tüm hakları saklıdır.</span></p>
+            <p>&copy; 2026 Aslan Grup. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved." data-de="Alle Rechte vorbehalten." data-fr="Tous droits réservés." data-es="Todos los derechos reservados." data-ar="جميع الحقوق محفوظة." data-zh="版权所有。">Tüm hakları saklıdır.</span></p>
         </div>
     </footer>
 

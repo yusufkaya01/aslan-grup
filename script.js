@@ -45,6 +45,48 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedLang = this.value;
         localStorage.setItem('preferredLanguage', selectedLang);
         updateLanguage(selectedLang);
+        
+        // Update document direction for RTL languages
+        if (selectedLang === 'ar') {
+            document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+            document.documentElement.setAttribute('dir', 'ltr');
+        }
+    });
+    
+    // Update language function
+    function updateLanguage(lang) {
+        // Update document direction for RTL languages
+        if (lang === 'ar') {
+            document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+            document.documentElement.setAttribute('dir', 'ltr');
+        }
+        
+        const elements = document.querySelectorAll('[data-' + lang + ']');
+        elements.forEach(element => {
+            const translation = element.getAttribute('data-' + lang);
+            if (translation) {
+                // Update text content or value based on element type
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translation;
+                } else if (element.tagName === 'OPTION') {
+                    element.textContent = translation;
+                } else {
+                    element.textContent = translation;
+                }
+            }
+        });
+        
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+    }
+    
+    // Language switch event
+    langSwitch.addEventListener('change', function() {
+        const selectedLang = this.value;
+        localStorage.setItem('preferredLanguage', selectedLang);
+        updateLanguage(selectedLang);
     });
     
     // Update language function
@@ -83,7 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 en: 'Your message has been sent successfully. We will get back to you as soon as possible.',
                 de: 'Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns so schnell wie möglich bei Ihnen melden.',
                 fr: 'Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.',
-                es: 'Su mensaje ha sido enviado con éxito. Nos pondremos en contacto con usted lo antes posible.'
+                es: 'Su mensaje ha sido enviado con éxito. Nos pondremos en contacto con usted lo antes posible.',
+                ar: 'تم إرسال رسالتك بنجاح. سنعاود الاتصال بك في أقرب وقت ممكن.',
+                zh: '您的消息已成功发送。我们会尽快与您联系。'
             };
             
             formMessage.textContent = messages[currentLang];

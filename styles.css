@@ -47,7 +47,19 @@ body {
     position: relative;
 }
 
-.logo h1 {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-text h1 {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-red);
