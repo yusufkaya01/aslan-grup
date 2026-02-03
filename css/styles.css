@@ -276,6 +276,20 @@ body {
 .company-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-icon img {
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+    display: block;
 }
 
 .company-logo {
@@ -417,20 +431,36 @@ body {
 
 .company-icon-large {
     font-size: 3.5rem;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-icon-large img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
 }
 
 .company-logo-large {
     font-size: 3.5rem;
     height: 100px;
+    width: 100px;
+    min-width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .company-logo-large img {
-    max-width: 150px;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
     max-height: 100px;
     object-fit: contain;
+    display: block;
 }
 
 .company-header h2 {
