@@ -950,3 +950,98 @@ footer p {
         padding: 3rem 0;
     }
 }
+
+/* Country Code Selector */
+.country-code-selector {
+    position: relative;
+    width: 150px;
+}
+
+.country-code-display {
+    padding: 0.8rem;
+    border: 2px solid var(--gray-medium);
+    border-radius: 5px;
+    background: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.country-code-display:hover {
+    border-color: var(--primary-red);
+}
+
+.country-code-display.active {
+    border-color: var(--primary-red);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+    color: var(--gray-dark);
+    transition: var(--transition);
+}
+
+.country-code-display.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.country-code-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    background: var(--white);
+    border: 2px solid var(--primary-red);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+}
+
+.country-code-dropdown.active {
+    display: block;
+}
+
+.country-search {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-bottom: 2px solid var(--gray-medium);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.country-search:focus {
+    border-bottom-color: var(--primary-red);
+}
+
+.country-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.country-option {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.country-option:hover {
+    background-color: var(--gray-light);
+}
+
+.country-option.selected {
+    background-color: var(--light-red);
+    color: var(--white);
+}

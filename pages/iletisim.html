@@ -101,15 +101,17 @@
                         <div class="form-group">
                             <label for="phone" data-tr="Telefon" data-en="Phone" data-de="Telefon" data-fr="Téléphone" data-es="Teléfono" data-ar="الهاتف" data-zh="电话">Telefon</label>
                             <div style="display: flex; gap: 0.5rem;">
-                                <select id="countryCode" name="countryCode" style="width: 120px; padding: 0.8rem; border: 2px solid var(--gray-medium); border-radius: 5px; font-family: inherit; font-size: 1rem;">
-                                    <option value="+90" data-lang="tr">🇹🇷 +90</option>
-                                    <option value="+44" data-lang="en">🇬🇧 +44</option>
-                                    <option value="+49" data-lang="de">🇩🇪 +49</option>
-                                    <option value="+33" data-lang="fr">🇫🇷 +33</option>
-                                    <option value="+34" data-lang="es">🇪🇸 +34</option>
-                                    <option value="+966" data-lang="ar">🇸🇦 +966</option>
-                                    <option value="+86" data-lang="zh">🇨🇳 +86</option>
-                                </select>
+                                <div class="country-code-selector">
+                                    <input type="hidden" id="countryCode" name="countryCode" value="+90">
+                                    <div class="country-code-display" id="countryCodeDisplay">
+                                        <span class="selected-country">🇹🇷 +90</span>
+                                        <span class="dropdown-arrow">▼</span>
+                                    </div>
+                                    <div class="country-code-dropdown" id="countryCodeDropdown">
+                                        <input type="text" class="country-search" id="countrySearch" placeholder="Search...">
+                                        <div class="country-list" id="countryList"></div>
+                                    </div>
+                                </div>
                                 <input type="tel" id="phone" name="phone" style="flex: 1; padding: 0.8rem; border: 2px solid var(--gray-medium); border-radius: 5px; font-family: inherit; font-size: 1rem;">
                             </div>
                         </div>
