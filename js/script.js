@@ -93,37 +93,92 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Contact form handling
+    // Contact form AJAX submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
+            const formData = new FormData(contactForm);
             const formMessage = document.getElementById('formMessage');
-            const currentLang = langSwitch.value;
+            const submitButton = contactForm.querySelector('button[type="submit"]');
             
-            // Simulate form submission
-            const messages = {
-                tr: 'Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.',
-                en: 'Your message has been sent successfully. We will get back to you as soon as possible.',
-                de: 'Ihre Nachricht wurde erfolgreich gesendet. Wir werden uns so schnell wie möglich bei Ihnen melden.',
-                fr: 'Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.',
-                es: 'Su mensaje ha sido enviado con éxito. Nos pondremos en contacto con usted lo antes posible.',
-                ar: 'تم إرسال رسالتك بنجاح. سنعاود الاتصال بك في أقرب وقت ممكن.',
-                zh: '您的消息已成功发送。我们会尽快与您联系。'
-            };
+            // Disable submit button during submission
+            submitButton.disabled = true;
+            submitButton.textContent = '...';
             
-            formMessage.textContent = messages[currentLang];
-            formMessage.className = 'form-message success';
-            formMessage.style.display = 'block';
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    const currentLang = langSwitch.value;
+                    const messages = {
+                        tr: 'Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.',
+                        en: 'Your message has been sent successfully! We will get back to you soon.',
+                        de: 'Ihre Nachricht wurde erfolgreich gesendet! Wir werden uns bald bei Ihnen melden.',
+                        fr: 'Votre message a été envoyé avec succès! Nous vous répondrons bientôt.',
+                        es: '¡Su mensaje ha sido enviado con éxito! Nos pondremos en contacto con usted pronto.',
+                        ar: 'تم إرسال رسالتك بنجاح! سنعاود الاتصال بك قريبًا.',
+                        zh: '您的消息已成功发送！我们会尽快与您联系。'
+                    };
+                    formMessage.textContent = messages[currentLang];
+                    formMessage.className = 'form-message success';
+                    formMessage.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Re-apply country code based on current language after reset
+                    const countryCodeSelect = document.getElementById('countryCode');
+                    if (countryCodeSelect) {
+                        const options = countryCodeSelect.querySelectorAll('option');
+                        options.forEach(option => {
+                            if (option.getAttribute('data-lang') === currentLang) {
+                                countryCodeSelect.value = option.value;
+                            }
+                        });
+                    }
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                const currentLang = langSwitch.value;
+                const errorMessages = {
+                    tr: 'Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.',
+                    en: 'An error occurred while sending the message. Please try again.',
+                    de: 'Beim Senden der Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.',
+                    fr: 'Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.',
+                    es: 'Ocurrió un error al enviar el mensaje. Por favor, inténtelo de nuevo.',
+                    ar: 'حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.',
+                    zh: '发送消息时出错。请重试。'
+                };
+                formMessage.textContent = errorMessages[currentLang];
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                const currentLang = langSwitch.value;
+                const buttonTexts = {
+                    tr: 'Gönder',
+                    en: 'Send',
+                    de: 'Senden',
+                    fr: 'Envoyer',
+                    es: 'Enviar',
+                    ar: 'إرسال',
+                    zh: '发送'
+                };
+                submitButton.textContent = buttonTexts[currentLang];
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
         });
     }
     
