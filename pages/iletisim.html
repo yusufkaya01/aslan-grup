@@ -89,7 +89,7 @@
 
                 <div class="contact-form-wrapper">
                     <h2 data-tr="Bize Ulaşın" data-en="Get In Touch" data-de="Kontaktieren Sie Uns" data-fr="Contactez-Nous" data-es="Contáctenos" data-ar="تواصل معنا" data-zh="联系我们">Bize Ulaşın</h2>
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mlgwndaz" method="POST">
                         <div class="form-group">
                             <label for="name" data-tr="Ad Soyad" data-en="Full Name" data-de="Vollständiger Name" data-fr="Nom Complet" data-es="Nombre Completo" data-ar="الاسم الكامل" data-zh="全名">Ad Soyad</label>
                             <input type="text" id="name" name="name" required>
@@ -100,22 +100,18 @@
                         </div>
                         <div class="form-group">
                             <label for="phone" data-tr="Telefon" data-en="Phone" data-de="Telefon" data-fr="Téléphone" data-es="Teléfono" data-ar="الهاتف" data-zh="电话">Telefon</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="company" data-tr="İlgili Şirket" data-en="Related Company" data-de="Betreffendes Unternehmen" data-fr="Entreprise Concernée" data-es="Empresa Relacionada" data-ar="الشركة ذات الصلة" data-zh="相关公司">İlgili Şirket</label>
-                            <select id="company" name="company">
-                                <option value="" data-tr="Seçiniz" data-en="Select" data-de="Auswählen" data-fr="Sélectionner" data-es="Seleccionar" data-ar="اختر" data-zh="选择">Seçiniz</option>
-                                <option value="aslan-grup" data-tr="Aslan Grup" data-en="Aslan Group" data-de="Aslan Gruppe" data-fr="Groupe Aslan" data-es="Grupo Aslan" data-ar="مجموعة أسلان" data-zh="阿斯兰集团">Aslan Grup</option>
-                                <option value="kozmetik">Aslan Kozmetik</option>
-                                <option value="rosa-therapy">Rosa Therapy Hotels</option>
-                                <option value="beyyurdu">Beyyurdu Çiftliği</option>
-                                <option value="dijital-medya" data-tr="Dijital Medya Platform" data-en="Digital Media Platform" data-de="Digitale Medienplattform" data-fr="Plateforme de Médias Numériques" data-es="Plataforma de Medios Digitales" data-ar="منصة الإعلام الرقمي" data-zh="数字媒体平台">Dijital Medya Platform</option>
-                                <option value="beyaz-is" data-tr="Beyaz İş Sağlığı ve Güvenliği" data-en="Beyaz Occupational Health and Safety" data-de="Beyaz Arbeitsschutz und Arbeitssicherheit" data-fr="Beyaz Santé et Sécurité au Travail" data-es="Beyaz Salud y Seguridad Ocupacional" data-ar="بياز للصحة والسلامة المهنية" data-zh="白色职业健康与安全">Beyaz İş Sağlığı ve Güvenliği</option>
-                                <option value="aslan-export">Aslan Export</option>
-                                <option value="kasif-spor" data-tr="Kaşif Spor Kulübü" data-en="Kaşif Sports Club" data-de="Kaşif Sportclub" data-fr="Kaşif Sports Club" data-es="Club Deportivo Kaşif" data-ar="نادي كاشيف الرياضي" data-zh="卡希夫体育俱乐部">Kaşif Spor Kulübü</option>
-                                <option value="his-dernegi" data-tr="His Derneği" data-en="His Association" data-de="His-Verein" data-fr="Association His" data-es="Asociación His" data-ar="جمعية هيس" data-zh="His协会">His Derneği</option>
-                            </select>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <select id="countryCode" name="countryCode" style="width: 120px; padding: 0.8rem; border: 2px solid var(--gray-medium); border-radius: 5px; font-family: inherit; font-size: 1rem;">
+                                    <option value="+90" data-lang="tr">🇹🇷 +90</option>
+                                    <option value="+44" data-lang="en">🇬🇧 +44</option>
+                                    <option value="+49" data-lang="de">🇩🇪 +49</option>
+                                    <option value="+33" data-lang="fr">🇫🇷 +33</option>
+                                    <option value="+34" data-lang="es">🇪🇸 +34</option>
+                                    <option value="+966" data-lang="ar">🇸🇦 +966</option>
+                                    <option value="+86" data-lang="zh">🇨🇳 +86</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone" style="flex: 1; padding: 0.8rem; border: 2px solid var(--gray-medium); border-radius: 5px; font-family: inherit; font-size: 1rem;">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="message" data-tr="Mesajınız" data-en="Your Message" data-de="Ihre Nachricht" data-fr="Votre Message" data-es="Su Mensaje" data-ar="رسالتك" data-zh="您的信息">Mesajınız</label>

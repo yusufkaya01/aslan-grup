@@ -80,34 +80,17 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update HTML lang attribute
         document.documentElement.lang = lang;
-    }
-    
-    // Language switch event
-    langSwitch.addEventListener('change', function() {
-        const selectedLang = this.value;
-        localStorage.setItem('preferredLanguage', selectedLang);
-        updateLanguage(selectedLang);
-    });
-    
-    // Update language function
-    function updateLanguage(lang) {
-        const elements = document.querySelectorAll('[data-' + lang + ']');
-        elements.forEach(element => {
-            const translation = element.getAttribute('data-' + lang);
-            if (translation) {
-                // Update text content or value based on element type
-                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                    element.placeholder = translation;
-                } else if (element.tagName === 'OPTION') {
-                    element.textContent = translation;
-                } else {
-                    element.textContent = translation;
-                }
-            }
-        });
         
-        // Update HTML lang attribute
-        document.documentElement.lang = lang;
+        // Update country code selection based on language
+        const countryCodeSelect = document.getElementById('countryCode');
+        if (countryCodeSelect) {
+            const options = countryCodeSelect.querySelectorAll('option');
+            options.forEach(option => {
+                if (option.getAttribute('data-lang') === lang) {
+                    countryCodeSelect.value = option.value;
+                }
+            });
+        }
     }
     
     // Contact form handling
