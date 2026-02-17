@@ -80,7 +80,7 @@ jobs:
       
       - name: Invalidate CloudFront cache (optional)
         run: |
-          # Uncomment if you're using CloudFront
-          # aws cloudfront create-invalidation \
-          #   --distribution-id YOUR_DISTRIBUTION_ID \
-          #   --paths "/*"
+         Uncomment if you're using CloudFront
+           aws cloudfront create-invalidation \
+             --distribution-id YOUR_DISTRIBUTION_ID \
+             --paths "/*"

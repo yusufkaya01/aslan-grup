@@ -165,7 +165,7 @@ body {
     border-color: var(--primary-red);
 }
 
-/* Hero Section */
+/* Hero Section */ 
 .hero {
     background: linear-gradient(135deg, var(--primary-red) 0%, var(--light-red) 100%);
     color: var(--white);
@@ -930,6 +930,17 @@ footer p {
     .company-header {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .logo-text h1 {
+        font-size: 2rem;
     }
 }
 
