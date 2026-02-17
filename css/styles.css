@@ -222,12 +222,16 @@ body {
 .slider-container {
     overflow: hidden;
     border-radius: 15px;
-
 }
 
 .slider-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+}
+
+/* Fix slider in RTL mode (Arabic) */
+html[dir="rtl"] .slider-track {
+    direction: ltr;
 }
 
 .slide {
@@ -278,6 +282,17 @@ body {
 
 .slider-btn.next {
     right: 20px;
+}
+
+/* Flip arrow positions in RTL mode (Arabic) */
+html[dir="rtl"] .slider-btn.prev {
+    left: auto;
+    right: 20px;
+}
+
+html[dir="rtl"] .slider-btn.next {
+    right: auto;
+    left: 20px;
 }
 
 .slider-dots {
@@ -1044,4 +1059,12 @@ footer p {
 .country-option.selected {
     background-color: var(--light-red);
     color: var(--white);
+}
+
+/* Brands grid - 3 columns on desktop */
+@media (min-width: 768px) {
+    .brands-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        max-width: 100% !important;
+    }
 }
