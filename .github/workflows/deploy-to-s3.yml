@@ -78,9 +78,8 @@ jobs:
             --content-type "image/png" \
             --metadata-directive REPLACE
       
-      - name: Invalidate CloudFront cache (optional)
+      - name: Invalidate CloudFront cache
         run: |
-         Uncomment if you're using CloudFront
-           aws cloudfront create-invalidation \
-             --distribution-id YOUR_DISTRIBUTION_ID \
-             --paths "/*"
+          aws cloudfront create-invalidation \
+            --distribution-id E2NKIM4N36ID45 \
+            --paths "/*"
