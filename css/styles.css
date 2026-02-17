@@ -165,7 +165,7 @@ body {
     border-color: var(--primary-red);
 }
 
-/* Hero Section */
+/* Hero Section */ 
 .hero {
     background: linear-gradient(135deg, var(--primary-red) 0%, var(--light-red) 100%);
     color: var(--white);
